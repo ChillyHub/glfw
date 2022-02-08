@@ -1,7 +1,7 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "off"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -31,7 +31,7 @@ project "GLFW"
     	"src/null_joystick.c"
 	}
 	filter "system:linux"
-		pic "On"
+		pic "on"
 
 		systemversion "latest"
 		
